@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLO CHOKO GAMERZ OFFICIAL</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            background-color: #0f0f0f;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* TOP HEADER */
+        header {
+            background-color: #FF0000;
+            padding: 20px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            font-size: 16px;
+        }
+
+        .container { padding: 20px; max-width: 800px; margin: auto; }
+
+        .ad-slot {
+            margin: 60px auto;
+            min-height: 250px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        #timerBtn, .continue-btn {
+            padding: 15px 35px;
+            font-size: 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        #timerBtn:disabled { background-color: #444; opacity: 0.6; cursor: not-allowed; }
+
+        /* FULL SCREEN OVERLAY */
+        #fullScreenOverlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.98);
+            z-index: 9999;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #overlayTimer { font-size: 80px; color: #ffcc00; margin: 20px; font-weight: bold; }
+
+        .continue-section { display: none; margin-top: 40px; }
+
+        #finalLink { 
+            display: none; 
+            margin: 50px 0;
+            padding: 40px;
+            border: 2px dashed #00ffcc;
+            background: #111;
+        }
+
+        /* BOTTOM STICKY BAR */
+        .bottom-ad-bar {
+            position: fixed;
+            bottom: 0; left: 0; width: 100%;
+            height: 75px;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+            border-top: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>YOUTUBE CHANNEL OLO CHOKO GAMERZ AND CHOKO GAMERZ SUBSCRIBE OFFICIAL CHANNELS</header>
+
+    <div class="container">
+        <p style="color: #bbb;">Click Start, wait 20s, then scroll down to GET YOUR LINK🖇️.</p>
+        <button id="timerBtn" onclick="startFirstTimer()">Start Timer</button>
+        <h2 id="countdown"></h2>
+
+        <!-- NATIVE BANNERS UPDATED -->
+        <div class="ad-slot" id="slot1">
+            <script async="async" data-cfasync="false" src="https://pl29414848.profitablecpmratenetwork.com/ba180bf291f5c3ea69710c76739f87b3/invoke.js"></script>
+            <div id="container-ba180bf291f5c3ea69710c76739f87b3"></div>
+        </div>
+
+        <div class="ad-slot" id="slot2">
+            <div id="container-ba180bf291f5c3ea69710c76739f87b3"></div>
+        </div>
+
+        <div class="ad-slot" id="slot3">
+            <div id="container-ba180bf291f5c3ea69710c76739f87b3"></div>
+        </div>
+
+        <div class="ad-slot" id="slot4">
+            <div id="container-ba180bf291f5c3ea69710c76739f87b3"></div>
+        </div>
+
+        <!-- CONTINUE SECTION -->
+        <div id="continueSection" class="continue-section">
+            <button class="continue-btn" onclick="openFullScreenTimer()">CONTINUE TO LINK</button>
+        </div>
+
+        <!-- FINAL REVEAL -->
+        <div id="finalLink">
+            <h2 style="color: #28a745;">VERIFICATION SUCCESSFUL!</h2>
+            <p>THIS LINK IS PROVIDED CHOKO GAMERZ SO SUPPORT SUBSCRIBE OUR YT Channel. </p>
+            <br>
+            <a id="realLinkAnchor" href="#" target="_blank" style="color:#00ffcc; font-size: 28px; text-decoration: none; border: 2px solid; padding: 15px; border-radius: 5px;">GET LINK NOW</a>
+        </div>
+        
+        <div style="height: 150px;"></div>
+    </div>
+
+    <!-- OVERLAY -->
+    <div id="fullScreenOverlay">
+        <h1 style="letter-spacing: 2px;">SORRY FOR TO MUCH ADS BECAUSE I AM A MIDAL CLASS BOY 😙 PLEASE WAIT...</h1>
+        <div id="overlayTimer">10</div>
+        <p>Your LINK IS GENERATING... </p>
+    </div>
+
+    <!-- BOTTOM STICKY BAR UPDATED -->
+    <div class="bottom-ad-bar">
+        <div>
+            <script>
+              atOptions = {
+                'key' : '54d1f8a97063bb8efbaab7106a4f255e',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/54d1f8a97063bb8efbaab7106a4f255e/invoke.js"></script>
+        </div>
+    </div>
+
+    <script>
+// ************************************************
+        // YAHAN APNA LINK DALO (PASTE YOUR LINK HERE)
+        // ************************************************
+
+        let mySecretLink = "https://t.me/pc_game_down/24370"; 
+
+        function startFirstTimer() {
+            let timeLeft = 20;
+            const btn = document.getElementById("timerBtn");
+            const countdownText = document.getElementById("countdown");
+            btn.disabled = true;
+
+            let timer = setInterval(function() {
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    countdownText.innerHTML = "✅ Verification Step 1 Done! Scroll to bottom.";
+                    document.getElementById("continueSection").style.display = "block";
+                } else {
+                    countdownText.innerHTML = "Processing: " + timeLeft + "s";
+                    timeLeft--;
+                }
+            }, 1000);
+        }
+
+        function openFullScreenTimer() {
+            document.getElementById("fullScreenOverlay").style.display = "flex";
+            let timeLeft = 10;
+            let timerDisplay = document.getElementById("overlayTimer");
+
+            let timer = setInterval(function() {
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    document.getElementById("fullScreenOverlay").style.display = "none";
+                    document.getElementById("finalLink").style.display = "block";
+                    document.getElementById("realLinkAnchor").href = mySecretLink;
+                    window.open(mySecretLink, '_blank');
+                    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                } else {
+                    timerDisplay.innerHTML = timeLeft;
+                    timeLeft--;
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
